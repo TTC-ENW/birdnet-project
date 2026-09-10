@@ -1,0 +1,19 @@
+[project]
+name = "birdnet-project"
+version = "0.1.0"
+description = "Add your description here"
+readme = "README.md"
+authors = [
+    { name = "Jeff Matheson", email = "jeff.matheson@tetratech.com" }
+]
+requires-python = ">=3.13"
+dependencies = [
+    "birdnet>=1.1.1",
+]
+
+[project.scripts]
+birdnet-project = "birdnet_project:main"
+
+[build-system]
+requires = ["uv_build>=0.12.12,<0.13.0"]
+build-backend = "uv_build"

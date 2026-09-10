@@ -47,3 +47,11 @@ po/*~
 
 # RStudio Connect folder
 rsconnect/
+
+# No nned to sync birdnet
+.venv/
+
+# Models are too big. And output can be run again
+outputs/
+models/
+audio_files/
