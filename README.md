@@ -14,24 +14,31 @@ So it looks like it is best to run birdnet in python. Then process the data usin
 
 ## How to Set Up and New Project
 
-1. First off, the easiest approach to working in a mixed R and Python environment is to use the Positron IDE from Posit. Positron handles both languages natively. The Positron IDE is free and there are no licensing or use restrictions. A single project can run Python for the BidNET model and then R scripts can be run for cleaning nd pricessing etc. (unless of course you want to keep using Python). An alternatove could be to work in another type of Python environment like a bare command line prompt and using Conda or other package and environment manager. 
+1. First off, the easiest approach to working in a mixed R and Python environment is to use the Positron IDE from Posit. Positron handles both languages natively. The Positron IDE is free and there are no licensing or use restrictions. A single project can run Python for the BidNET model and then R scripts can be run for cleaning and processing etc. (unless of course you want to keep using Python). An alternative could be to work in another type of Python environment like a bare command line prompt and using Conda or other package and environment manager. 
 
-2. Install Positron. If not already installed, install R. In Positron, add extensions to work with R and Python and for syntax completion in each language. See Posit's guide.  https://positron.posit.co/welcome.html. 
+2. Install Positron. If not already installed, also install R. In Positron, add extensions to work with R and Python and for syntax completion in each language. See Posit's guide.  https://positron.posit.co/welcome.html. The python package and environment manager 'uv' can be used to install python and set up environments. 
 
-3. The python package and environment manager 'uv' can be used to install python and set up environments. 
+4. Create a new project in Positron. Create the remote repository on Github as well, if you are using it. Create some folders for audio input files, outputs, and folder for R and Python scripts. 
 
-4. Create a new project. 
+5. Install birdnet using the following at the terminal prompt. 
 
-5. To be completed...
+    ```{powershell}
+    uv add birdnet
+    # Check all packages:
+    uv pip list
+    ```
+6. Run the birdnet functions. See the example script called "run_birdnet.py".
+
+
 
 ## BirdNET Update
 
-If BirdNET releases a new version, run this in the terminal
+If BirdNET releases a new version, run this in the terminal (make sure you are in your project folder):
 ```{powershell}
 uv add --upgrade birdnet
 ```
 
+## Other Packages 
 
-
-NSNSDAAcoustics has a bunch of additional tools for wrangling:
+NSNSDAAcoustics has a bunch of additional tools for wrangling and anlyzing BirdNet outputs.
 https://github.com/nationalparkservice/NSNSDAcoustics
